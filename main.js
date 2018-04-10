@@ -194,8 +194,12 @@ function ConvertInput() {
   if (isNaN(translateY))
     translateY = 0;
 
-  var scaleX = $('flip-x').checked ? -1 : 1;
-  var scaleY = $('flip-y').checked ? -1 : 1;
+  var scaleX = parseFloat($('scale-x').value);
+  var scaleY = parseFloat($('scale-y').value);
+  if (isNaN(translateX))
+    scaleX = 1;
+  if (isNaN(translateY))
+    scaleX = 1;
 
   var input = $('user-input').value;
   $('svg-anchor').innerHTML = input;

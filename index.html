@@ -21,12 +21,14 @@ optimizer</a>).</p>
   <div id="input-stuff">
     <p>Paste your SVG source below and then <button id="go-button">Skiafy!</button></p>
     <p>Options:</p>
+
     <p>
-      <label><input id="flip-x" type="checkbox"> Flip on <var>x</var> axis</label><br/>
-      <label><input id="flip-y" type="checkbox"> Flip on <var>y</var> axis</label>
+      Scale:<br/>
+      <input id="scale-x" placeholder="x" type="number" value="1.0"><br/>
+      <input id="scale-y" placeholder="y" type="number" value="1.0">
     </p>
     <p>
-      Translate (applies after flip):<br/>
+      Translate (applies after scale/flip):<br/>
       <input id="transform-x" placeholder="x"><br/>
       <input id="transform-y" placeholder="y">
     </p>
