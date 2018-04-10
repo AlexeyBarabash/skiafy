@@ -70,8 +70,9 @@ function HandleNode(svgNode, scaleX, scaleY, translateX, translateY) {
       case 'path':
         // If fill is none, this is probably one of those worthless paths
         // of the form <path fill="none" d="M0 0h24v24H0z"/>
-        if (svgElement.getAttribute('fill') == 'none')
-          break;
+        // if (svgElement.getAttribute('fill') == 'none')
+        //   break;
+        // AB: some svgs consist of strokes are not rendered if break here
 
         var commands = [];
         var path = svgElement.getAttribute('d').replace(/,/g, ' ').trim();
